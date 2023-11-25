@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reigine Marie Mejares</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec; /* light pink background */
+            color: #333; /* dark text color */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative; /* Set position to relative for absolute positioning of balloons */
+        }
+
+        header {
+            background-color: #ffc0cb; /* light pink header background */
+            padding: 20px;
+            position: relative; /* Set position to relative for absolute positioning of balloons */
+        }
+
+        .balloon {
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            background-color: #ffcc00; /* yellow balloon color */
+            border-radius: 50%;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff69b4; /* pink confetti color */
+            border-radius: 50%;
+            animation: fall 3s infinite;
+        }
+
+        @keyframes fall {
+            0%, 20% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(500px);
+            }
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* white content background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Set position to relative for absolute positioning of balloons */
+        }
+
+        h1, h2 {
+            color: #333; /* dark text color */
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .video-container {
+            display: none;
+        }
+
+        /* Style the button */
+        .video-button {
+            background-color: #ffc0cb; /* light pink */
+            color: #333; /* dark text color */
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="wallpaper for pc we bare bears.jpg" alt="Reigine Marie Mejares" style="border-radius: 50%; max-width: 150px;"/>
+        <h1>Reigine Marie Mejares</h1>
+        <!-- Balloons -->
+        <div class="balloon" style="top: 50px; left: 50px;"></div>
+        <div class="balloon" style="top: 100px; left: 200px;"></div>
+        <div class="balloon" style="top: 150px; left: 350px;"></div>
+        <!-- Confetti -->
+        <div class="confetti" style="top: 80px; left: 100px;"></div>
+        <div class="confetti" style="top: 120px; left: 250px;"></div>
+        <div class="confetti" style="top: 180px; left: 400px;"></div>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I am Reigine Marie Mejares, a nursing student with a passion for helping others. I have a love for all things pink, especially Hello Kitty!</p>
+    </section>
+
+    <section class="video-container" id="video-section">
+        <h2>Video Introduction</h2>
+        <video controls width="600">
+            <source src="VID_20230224_202454.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Button to toggle between sections -->
+    <a href="javascript:void(0);" onclick="toggleSections()" class="video-button" id="toggle-button">Watch Video</a>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me at reigine@example.com</p>
+    </section>
+
+    <script>
+        function toggleSections() {
+            var videoContainer = document.querySelector('.video-container');
+            var toggleButton = document.getElementById('toggle-button');
+
+            if (videoContainer.style.display === 'none') {
+                videoContainer.style.display = 'block';
+                toggleButton.innerHTML = 'Go Back';
+            } else {
+                videoContainer.style.display = 'none';
+                toggleButton.innerHTML = 'Watch Video';
+            }
+        }
+    </script>
+
+</body>
+</html>
